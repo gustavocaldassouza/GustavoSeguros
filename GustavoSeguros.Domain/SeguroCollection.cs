@@ -8,6 +8,6 @@ namespace GustavoSeguros.Domain
 {
   public sealed class SeguroCollection : List<Seguro>
   {
-    public float MediaAritmetica { get; set; }
+    public decimal MediaAritmetica { get; set; }
   }
 }

@@ -7,7 +7,7 @@ namespace GustavoSeguros.Application.UseCases.CalcularSeguro
 {
   public interface IOutputPort
   {
-    void Ok(float valor);
+    void Ok(decimal valor);
     void Invalid();
   }
 }

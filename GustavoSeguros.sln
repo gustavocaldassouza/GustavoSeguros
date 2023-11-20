@@ -3,13 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34309.116
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GustavoSeguros.Presentation", "GustavoSeguros.Presentation\GustavoSeguros.Presentation.csproj", "{D5193D15-E004-4469-91B0-E0C0AD612E1F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GustavoSeguros.Presentation", "GustavoSeguros.Presentation\GustavoSeguros.Presentation.csproj", "{D5193D15-E004-4469-91B0-E0C0AD612E1F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GustavoSeguros.Domain", "GustavoSeguros.Domain\GustavoSeguros.Domain.csproj", "{9C25571F-80DE-4B27-83C2-22D20C68E5CB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GustavoSeguros.Domain", "GustavoSeguros.Domain\GustavoSeguros.Domain.csproj", "{9C25571F-80DE-4B27-83C2-22D20C68E5CB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GustavoSeguros.Application", "GustavoSeguros.Application\GustavoSeguros.Application.csproj", "{E9B58F86-7B5A-4CDB-8412-F143BCAD918C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GustavoSeguros.Application", "GustavoSeguros.Application\GustavoSeguros.Application.csproj", "{E9B58F86-7B5A-4CDB-8412-F143BCAD918C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GustavoSeguros.Infrastructure", "GustavoSeguros.Infrastructure\GustavoSeguros.Infrastructure.csproj", "{EDF84BFB-CCE4-4EB2-8089-7C19E65EA5EA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GustavoSeguros.Infrastructure", "GustavoSeguros.Infrastructure\GustavoSeguros.Infrastructure.csproj", "{EDF84BFB-CCE4-4EB2-8089-7C19E65EA5EA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GustavoSeguros.Tests", "GustavoSeguros.Tests\GustavoSeguros.Tests.csproj", "{1A331A60-95AB-4F35-A0CE-0254B3867694}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{EDF84BFB-CCE4-4EB2-8089-7C19E65EA5EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EDF84BFB-CCE4-4EB2-8089-7C19E65EA5EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EDF84BFB-CCE4-4EB2-8089-7C19E65EA5EA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1A331A60-95AB-4F35-A0CE-0254B3867694}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1A331A60-95AB-4F35-A0CE-0254B3867694}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1A331A60-95AB-4F35-A0CE-0254B3867694}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1A331A60-95AB-4F35-A0CE-0254B3867694}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

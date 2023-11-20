@@ -16,7 +16,7 @@ namespace GustavoSeguros.Application.UseCases.CalcularSeguro
       _calculoSeguro = new CalculoSeguro();
     }
 
-    public void Executar(float valorVeiculo)
+    public void Executar(decimal valorVeiculo)
     {
       try
       {

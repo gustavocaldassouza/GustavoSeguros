@@ -6,16 +6,16 @@ namespace GustavoSeguros.Application.Common
 {
   public class CalculoSeguro
   {
-    private const float MARGEM_SEGURANCA = .03f;
-    private const float LUCRO = .05f;
+    private const decimal MARGEM_SEGURANCA = .03M;
+    private const decimal LUCRO = .05M;
 
-    public float Calcular(float valorVeiculo)
+    public decimal Calcular(decimal valorVeiculo)
     {
-      float taxaDeRisco = valorVeiculo * 5 / valorVeiculo * 2;
-      float premioDeRisco = taxaDeRisco * valorVeiculo;
-      float premioPuro = premioDeRisco * (1 + MARGEM_SEGURANCA);
-      float premioComercial = LUCRO * premioPuro;
-      return premioComercial;
+      decimal taxaDeRisco = valorVeiculo * 5 / (valorVeiculo * 2);
+      decimal premioDeRisco = taxaDeRisco/100 * valorVeiculo;
+      decimal premioPuro = premioDeRisco * (1 + MARGEM_SEGURANCA);
+      decimal premioComercial = LUCRO * premioPuro;
+      return Math.Truncate((premioPuro + premioComercial) * 100) / 100;
     }
   }
 }

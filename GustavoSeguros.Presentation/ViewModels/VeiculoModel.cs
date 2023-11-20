@@ -6,7 +6,7 @@ namespace GustavoSeguros.Presentation.ViewModels
   public class VeiculoModel
   {
     public int Id { get; set; }
-    [Required] public float Valor { get; set; }
+    [Required] public decimal Valor { get; set; }
     [Required] public string Modelo { get; set; }
     public VeiculoModel(Veiculo veiculo)
     {
