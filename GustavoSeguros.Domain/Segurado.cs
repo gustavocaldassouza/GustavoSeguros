@@ -21,5 +21,10 @@ namespace GustavoSeguros.Domain
       CPF = cPF;
       Idade = idade;
     }
+
+    public bool IsValid()
+    {
+      return Nome != null && CPF != null && Idade > 18;
+    }
   }
 }

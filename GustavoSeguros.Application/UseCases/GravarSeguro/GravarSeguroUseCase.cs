@@ -11,23 +11,32 @@ namespace GustavoSeguros.Application.UseCases.GravarSeguro
   public class GravarSeguroUseCase : IGravarSeguroUseCase
   {
     private readonly ISeguroRepository _seguroRepository;
-    private IOutputPort _outputPort;
+    private IOutputPort OutputPort { get; set; }
     public GravarSeguroUseCase(ISeguroRepository seguroRepository)
     {
       _seguroRepository = seguroRepository;
-      _outputPort = new GravarSeguroPresenter();
+      OutputPort = new GravarSeguroPresenter();
     }
     public void Executar(Seguro seguro)
     {
-      // Gravar os dados de um Seguro em banco de dados relacional
-      _seguroRepository.Add(seguro);
-      //Rodou no banco!
-      _outputPort.Ok(seguro);
+      try
+      {
+        if (seguro.Segurado.IsValid() && seguro.Veiculo.IsValid())
+        {
+          _seguroRepository.Add(seguro);
+          OutputPort.Ok(seguro);
+        }
+        OutputPort.Invalid();
+      }
+      catch (Exception e)
+      {
+        throw e;
+      }
     }
 
     public void SetOutputPort(IOutputPort outputPort)
     {
-      _outputPort = outputPort;
+      OutputPort = outputPort;
     }
   }
 }

@@ -18,5 +18,10 @@ namespace GustavoSeguros.Domain
       Valor = valor;
       Modelo = modelo;
     }
+
+    public bool IsValid()
+    {
+      return Valor != 0 && Modelo != null;
+    }
   }
 }
