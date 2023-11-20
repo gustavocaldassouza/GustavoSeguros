@@ -6,8 +6,8 @@ namespace GustavoSeguros.Presentation.ViewModels
   public class SeguroModel
   {
     public int Id { get; set; }
-    public VeiculoModel VeiculoModel { get; set; }
-    public SeguradoModel SeguradoModel { get; set; }
+    [Required] public VeiculoModel VeiculoModel { get; set; }
+    [Required] public SeguradoModel SeguradoModel { get; set; }
     public SeguroModel(Seguro seguro)
     {
       Id = seguro.Id;

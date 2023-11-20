@@ -25,6 +25,7 @@ namespace GustavoSeguros.Application.UseCases.GravarSeguro
         {
           _seguroRepository.Add(seguro);
           OutputPort.Ok(seguro);
+          return;
         }
         OutputPort.Invalid();
       }
