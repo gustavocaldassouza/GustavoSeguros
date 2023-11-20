@@ -30,11 +30,9 @@ namespace GustavoSeguros.Presentation.UseCases.GravarSeguro
     }
 
     [HttpPost]
-    public IActionResult Post()
+    public IActionResult Post([FromBody]SeguroModel seguroModel)
     {
-      var seguro = new Seguro();
-      seguro.Id = 1;
-      _useCase.Executar(seguro);
+      _useCase.Executar(seguroModel.ToSeguro());
       return _viewModel;
     }
   }

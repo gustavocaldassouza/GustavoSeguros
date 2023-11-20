@@ -7,7 +7,17 @@ namespace GustavoSeguros.Infrastructure
   {
     public void Add(Seguro seguro)
     {
-      //TODO!
+      throw new NotImplementedException();
+    }
+
+    public Seguro Get(int id)
+    {
+      throw new NotImplementedException();
+    }
+
+    public SeguroCollection GetCollection()
+    {
+      throw new NotImplementedException();
     }
   }
 }

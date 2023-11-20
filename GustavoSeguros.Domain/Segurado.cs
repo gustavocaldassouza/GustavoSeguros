@@ -15,8 +15,9 @@ namespace GustavoSeguros.Domain
     {
     }
 
-    public Segurado(string nome, string cPF, int idade)
+    public Segurado(int id, string nome, string cPF, int idade)
     {
+      Id = id;
       Nome = nome;
       CPF = cPF;
       Idade = idade;

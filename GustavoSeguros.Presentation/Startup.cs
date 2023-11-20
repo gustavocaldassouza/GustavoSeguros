@@ -26,6 +26,7 @@ namespace GustavoSeguros.Presentation
     public void ConfigureServices(IServiceCollection services)
     {
       services.AddControllers();
+      services.AddSwaggerGen();
       services.AddUseCases();
     }
 
@@ -35,7 +36,13 @@ namespace GustavoSeguros.Presentation
       if (env.IsDevelopment())
       {
         app.UseDeveloperExceptionPage();
+        app.UseSwagger();
       }
+
+      app.UseSwaggerUI(options =>
+      {
+        options.SwaggerEndpoint("/swagger/v1/swagger.json", "v1");
+      });
 
       app.UseHttpsRedirection();
 
