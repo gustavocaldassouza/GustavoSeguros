@@ -32,7 +32,7 @@ namespace GustavoSeguros.Application.UseCases.GerarRelatorio
       }
       catch (Exception e)
       {
-
+        OutputPort.Invalid();
         throw e;
       }
     }

@@ -3,9 +3,9 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace GustavoSeguros.Application.UseCases.PesquisarSeguros
+namespace GustavoSeguros.Application.UseCases.PesquisarSeguro
 {
-  public class PesquisarSegurosPresenter : IOutputPort
+  public class PesquisarSeguroPresenter : IOutputPort
   {
     public Seguro Seguro { get; private set; }
     public bool InvalidOutput { get; private set; }

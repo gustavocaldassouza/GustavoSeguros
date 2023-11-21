@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace GustavoSeguros.Application.UseCases.PesquisarSeguros
+namespace GustavoSeguros.Application.UseCases.PesquisarSeguro
 {
-  public interface IPesquisarSegurosUseCase
+  public interface IPesquisarSeguroUseCase
   {
     void Executar(int id);
     void SetOutputPort(IOutputPort outputPort);

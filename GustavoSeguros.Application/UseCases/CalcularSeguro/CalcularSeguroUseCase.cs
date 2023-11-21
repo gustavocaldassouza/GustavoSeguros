@@ -25,6 +25,7 @@ namespace GustavoSeguros.Application.UseCases.CalcularSeguro
       }
       catch (Exception e)
       {
+        OutputPort.Invalid();
         throw e;
       }
     }

@@ -20,13 +20,13 @@ namespace GustavoSeguros.Presentation.UseCases.GravarSeguro
     }
     void IOutputPort.Invalid()
     {
-      _viewModel = this.BadRequest();
+      _viewModel = BadRequest();
     }
 
     void IOutputPort.Ok(Seguro seguro)
     {
       var viewModel = new SeguroModel(seguro);
-      _viewModel = this.Ok(viewModel);
+      _viewModel = Ok(viewModel);
     }
 
     [HttpPost]

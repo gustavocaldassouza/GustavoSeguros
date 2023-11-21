@@ -31,6 +31,7 @@ namespace GustavoSeguros.Application.UseCases.GravarSeguro
       }
       catch (Exception e)
       {
+        OutputPort.Invalid();
         throw e;
       }
     }

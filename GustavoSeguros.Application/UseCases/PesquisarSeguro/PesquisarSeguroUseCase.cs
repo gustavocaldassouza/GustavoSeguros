@@ -4,16 +4,16 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace GustavoSeguros.Application.UseCases.PesquisarSeguros
+namespace GustavoSeguros.Application.UseCases.PesquisarSeguro
 {
-  public class PesquisarSegurosUseCase : IPesquisarSegurosUseCase
+  public class PesquisarSeguroUseCase : IPesquisarSeguroUseCase
   {
     private readonly ISeguroRepository _seguroRepository;
     private IOutputPort OutputPort { get; set; }
-    public PesquisarSegurosUseCase(ISeguroRepository seguroRepository)
+    public PesquisarSeguroUseCase(ISeguroRepository seguroRepository)
     {
       _seguroRepository = seguroRepository;
-      OutputPort = new PesquisarSegurosPresenter();
+      OutputPort = new PesquisarSeguroPresenter();
     }
     public void Executar(int id)
     {
@@ -28,6 +28,7 @@ namespace GustavoSeguros.Application.UseCases.PesquisarSeguros
       }
       catch (Exception e)
       {
+        OutputPort.Invalid();
         throw e;
       }
     }
