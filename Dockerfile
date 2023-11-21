@@ -10,6 +10,7 @@ WORKDIR /src
 # Copy the solution file and restore dependencies
 COPY . .
 RUN dotnet restore
+RUN dotnet test
 
 # Build the application
 WORKDIR "/src/GustavoSeguros.Presentation/"

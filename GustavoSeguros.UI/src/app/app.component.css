@@ -1,0 +1,40 @@
+.spinner {
+  margin: auto;
+  top: 45%;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  height: 60px;
+  width: 100%;
+}
+.card {
+  width: 200px;
+  margin: 5px 5px 3px 0px;
+  width: 20%;
+}
+mat-card-title {
+  font-size: 18px;
+  margin-left: -5px;
+}
+mat-card-subtitle {
+  margin-top: -15px;
+  font-size: 12px;
+  margin-left: -5px;
+}
+.filter {
+  margin: 5px;
+  margin-bottom: -20px;
+  width: 80%;
+}
+.table {
+  margin: 5px;
+  width: calc(100% - 10px);
+}
+.mat-column-id {
+  width: 32px;
+  border-right: 1px solid currentColor;
+  padding-right: 24px;
+  text-align: center;
+}
