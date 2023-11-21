@@ -6,8 +6,9 @@ using System.Text;
 
 namespace GustavoSeguros.Domain
 {
-  public sealed class SeguroCollection : List<Seguro>
+  public sealed class SeguroCollection
   {
     public decimal MediaAritmetica { get; set; }
+    public List<Seguro> seguros { get; set; }
   }
 }

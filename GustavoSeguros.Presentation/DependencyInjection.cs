@@ -1,5 +1,4 @@
-﻿using GustavoSeguros.Application.UseCases;
-using GustavoSeguros.Application.UseCases.CalcularSeguro;
+﻿using GustavoSeguros.Application.UseCases.CalcularSeguro;
 using GustavoSeguros.Application.UseCases.GerarRelatorio;
 using GustavoSeguros.Application.UseCases.GravarSeguro;
 using GustavoSeguros.Application.UseCases.PesquisarSeguro;

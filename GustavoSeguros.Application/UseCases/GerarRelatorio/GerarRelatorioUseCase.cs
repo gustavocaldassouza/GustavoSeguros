@@ -23,7 +23,7 @@ namespace GustavoSeguros.Application.UseCases.GerarRelatorio
       {
         var seguros = _seguroRepository.GetCollection();
         decimal mediaAritmetica = 0;
-        foreach (var seg in seguros)
+        foreach (var seg in seguros.seguros)
         {
           mediaAritmetica += _calculoSeguro.Calcular(seg.Veiculo.Valor);
         }
