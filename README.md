@@ -12,7 +12,7 @@ O projeto foi implantado utilizando Docker Compose.
 
 ### 1. Angular App
 
-- **Porta Exposta:** 80
+- **Porta Exposta:** 8085
 
 ### 2. ASP.NET Core API
 

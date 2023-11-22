@@ -5,7 +5,7 @@ services:
     build:
       context: ./GustavoSeguros.UI/
     ports:
-      - "80:80"
+      - "8085:80"
     depends_on:
       - aspnet-core-api
     networks:
