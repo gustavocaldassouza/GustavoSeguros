@@ -4,10 +4,6 @@
 
 O projeto foi implantado utilizando Docker Compose.
 
-## Preview do projeto
-
-[Seguros](https://gustavocaldas.net/services/seguro)
-
 ## Serviços
 
 ### 1. Angular App
