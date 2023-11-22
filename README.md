@@ -23,4 +23,4 @@ O projeto foi implantado utilizando Docker Compose.
 ### Como rodar localmente
 
 CMD/BASH
-`docker compose up --build -d && docker compose down && docker compose up -d`
+`docker compose up --build -d && docker compose stop && docker compose up`
