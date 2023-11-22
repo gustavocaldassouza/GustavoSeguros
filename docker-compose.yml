@@ -1,27 +1,37 @@
 version: '3.4'
 
 services:
-  web:
+  angular-app:
+    build:
+      context: ./GustavoSeguros.UI/
+    ports:
+      - "8081:80"
+    depends_on:
+      - aspnet-core-api
+    networks:
+      - seguronetwork
+
+  aspnet-core-api:
     build:
       context: .
     ports:
-      - "8080:80"
+      - "8080:88"
     depends_on:
-      - db
+      - sql-server-db
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
-      - ConnectionStrings__DefaultConnection=Server=db;Database=MyDataBase;User=SA;Password=YourPassword123!;MultipleActiveResultSets=true
+      - ConnectionStrings__DefaultConnection=Server=sql-server-db;Database=MyDataBase;User=SA;Password=YourPassword123!;MultipleActiveResultSets=true
     networks:
-      - my-network
+      - seguronetwork
 
-  db:
+  sql-server-db:
     image: mcr.microsoft.com/mssql/server:2022-latest
     environment:
       SA_PASSWORD: YourPassword123!
       ACCEPT_EULA: "Y"
     networks:
-      - my-network
+      - seguronetwork
 
 networks:
-  my-network:
+  seguronetwork:
     driver: bridge

@@ -7,7 +7,7 @@ import { SeguroCollection } from './models/segurocolletion';
   providedIn: 'root',
 })
 export class SeguroService {
-  baseurl = 'http://localhost:8080';
+  private baseurl = 'http://aspnet-core-api:88';
   constructor(private http: HttpClient) {}
   httpOptions = {
     headers: new HttpHeaders({
@@ -17,7 +17,7 @@ export class SeguroService {
 
   GetSeguros(): Observable<SeguroCollection> {
     return this.http
-      .get<SeguroCollection>(this.baseurl + '/GerarRelatorio/')
+      .get<SeguroCollection>(this.baseurl + '/GerarRelatorio')
       .pipe(retry(1), catchError(this.errorHandl));
   }
 

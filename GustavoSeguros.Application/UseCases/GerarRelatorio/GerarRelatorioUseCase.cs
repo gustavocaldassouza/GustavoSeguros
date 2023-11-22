@@ -22,12 +22,15 @@ namespace GustavoSeguros.Application.UseCases.GerarRelatorio
       try
       {
         var seguros = _seguroRepository.GetCollection();
-        decimal mediaAritmetica = 0;
+        decimal somaCalculoSeguro = 0;
         foreach (var seg in seguros.seguros)
         {
-          mediaAritmetica += _calculoSeguro.Calcular(seg.Veiculo.Valor);
+          somaCalculoSeguro += _calculoSeguro.Calcular(seg.Veiculo.Valor);
         }
-        seguros.MediaAritmetica = mediaAritmetica;
+        if (seguros.seguros.Count > 0)
+        {
+          seguros.MediaAritmetica = somaCalculoSeguro / seguros.seguros.Count;
+        }
         OutputPort.Ok(seguros);
       }
       catch (Exception e)
