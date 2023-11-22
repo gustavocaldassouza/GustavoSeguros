@@ -6,7 +6,7 @@ O projeto foi implantado utilizando Docker Compose.
 
 ## Preview do projeto
 
-gustavocaldas.net/services/seguro
+[Seguro Preview](https://gustavocaldas.net/services/seguro)
 
 ## Serviços
 
