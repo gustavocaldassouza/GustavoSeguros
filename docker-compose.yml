@@ -5,7 +5,7 @@ services:
     build:
       context: ./GustavoSeguros.UI/
     ports:
-      - "8081:80"
+      - "80:80"
     depends_on:
       - aspnet-core-api
     networks:
@@ -15,7 +15,7 @@ services:
     build:
       context: .
     ports:
-      - "8080:88"
+      - "88:88"
     depends_on:
       - sql-server-db
     environment:

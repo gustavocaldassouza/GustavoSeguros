@@ -33,16 +33,21 @@ export class AppComponent implements OnInit {
 
   ngOnInit() {
     this.getSeguros();
-    this.mapSegurosToTable();
-    this.showData = true;
   }
 
   constructor(private seguroService: SeguroService) {}
 
   getSeguros() {
-    this.seguroService.GetSeguros().subscribe((data: SeguroCollection) => {
-      this.seguroCollection = data;
-    });
+    this.seguroService.GetSeguros().subscribe(
+      (data: SeguroCollection) => {
+        this.seguroCollection = data;
+        this.mapSegurosToTable();
+        this.showData = true;
+      },
+      (error) => {
+        console.error('Error fetching seguro data:', error);
+      }
+    );
   }
 
   mapSegurosToTable() {
